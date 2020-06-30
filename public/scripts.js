@@ -13,6 +13,41 @@ const links = [
     }
 ]
 
+const projects = [
+    {
+        title: "Number 1",
+        imgSrc: "https://picsum.photos/300",
+        description: "Yabba dabba wabba labba mabba habba grabba pabba dabba wabba labba mabba habba grabba pabba dabba wabba labba mabba habba grabba pabba dabba wabba labba mabba habba grabba pabba dabba wabba labba mabba habba grabba pabba"
+    },
+    {
+        title: "Number 2",
+        imgSrc: "https://picsum.photos/300",
+        description: "Yabba dabba wabba labba mabba habba grabba pabba dabba wabba labba mabba habba grabba pabba dabba wabba labba mabba habba grabba pabba dabba wabba labba mabba habba grabba pabba dabba wabba labba mabba habba grabba pabba"
+    },
+    {
+        title: "Number 3",
+        imgSrc: "https://picsum.photos/300",
+        description: "Yabba dabba wabba labba mabba habba grabba pabba dabba wabba labba mabba habba grabba pabba dabba wabba labba mabba habba grabba pabba dabba wabba labba mabba habba grabba pabba dabba wabba labba mabba habba grabba pabba"
+    },
+    {
+        title: "Number 4",
+        imgSrc: "https://picsum.photos/300",
+        description: "Yabba dabba wabba labba mabba habba grabba pabba dabba wabba labba mabba habba grabba pabba dabba wabba labba mabba habba grabba pabba dabba wabba labba mabba habba grabba pabba dabba wabba labba mabba habba grabba pabba"
+    }
+]
+
+const buildCards = (cards) => cards.map((card)=> {
+    return `
+        <li class="card">
+            <div class="img-container">
+                <img src="${card.imgSrc}" alt="">
+            </div>
+            <h1>${card.title}</h1>
+            <p>${card.description}</p>
+        </li>
+        `
+})
+
 const buildLinks = (links_) => links_.map((link)=>{
     return `
         <li><a href="${link.href}">${link.content}</a></li>
@@ -28,5 +63,5 @@ footer.innerHTML = buildLinks([...links, {
     content: "Tweet at Me"
 }]);
 
-const mainContent = document.getElementById('main');
-mainContent.innerHTML = "Hello World";
+const projectsContainer = document.getElementById('projects');
+projectsContainer.innerHTML = buildCards(projects);

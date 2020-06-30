@@ -22,6 +22,7 @@ body {
 }
 
 body .header {
+    z-index: 0;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -76,12 +77,53 @@ body .header {
 
 .header > .navigation > ul > li > a:link {
     text-decoration: none;
+    text-transform: uppercase;
+}
+
+.header > .navigation > ul > li > a:visited {
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 body .main-content {
+    background-color: white;
+    width: 95vw;
+    margin: 2.5vw;
+    margin-top: -10vw;
+    min-height: 100vh;
+    z-index: 2;
+    border-radius: 6%;
+    padding: 10vw 1.5rem 0 1rem;
+}
 
+.main-content > #projects {
+    display: flex;
+    justify-content: space-around;
+}
+
+.title {
+    text-align: center;
+    font-size: 3rem;
+    color: #555;
+    margin: 1rem .2rem 2.5rem;
 }
 
 body .footer {
 
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 32rem;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+.card > img {
+    max-width: 30rem;
 }
