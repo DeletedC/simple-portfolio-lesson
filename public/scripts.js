@@ -16,21 +16,25 @@ const links = [
 const projects = [
     {
         title: "Number 1",
+        link: "https://github.com",
         imgSrc: "https://picsum.photos/300",
         description: "Yabba dabba wabba labba mabba habba grabba pabba dabba wabba labba mabba habba grabba pabba dabba wabba labba mabba habba grabba pabba dabba wabba labba mabba habba grabba pabba dabba wabba labba mabba habba grabba pabba"
     },
     {
         title: "Number 2",
+        link: "https://github.com",
         imgSrc: "https://picsum.photos/300",
         description: "Yabba dabba wabba labba mabba habba grabba pabba dabba wabba labba mabba habba grabba pabba dabba wabba labba mabba habba grabba pabba dabba wabba labba mabba habba grabba pabba dabba wabba labba mabba habba grabba pabba"
     },
     {
         title: "Number 3",
+        link: "https://github.com",
         imgSrc: "https://picsum.photos/300",
         description: "Yabba dabba wabba labba mabba habba grabba pabba dabba wabba labba mabba habba grabba pabba dabba wabba labba mabba habba grabba pabba dabba wabba labba mabba habba grabba pabba dabba wabba labba mabba habba grabba pabba"
     },
     {
         title: "Number 4",
+        link: "https://github.com",
         imgSrc: "https://picsum.photos/300",
         description: "Yabba dabba wabba labba mabba habba grabba pabba dabba wabba labba mabba habba grabba pabba dabba wabba labba mabba habba grabba pabba dabba wabba labba mabba habba grabba pabba dabba wabba labba mabba habba grabba pabba"
     }
@@ -39,6 +43,7 @@ const projects = [
 const buildCards = (cards) => cards.map((card)=> {
     return `
         <li class="card">
+            <a href="${card.link}>
             <div class="img-container">
                 <img src="${card.imgSrc}" alt="">
             </div>

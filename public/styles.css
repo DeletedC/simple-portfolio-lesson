@@ -127,3 +127,7 @@ body .footer {
 .card > img {
     max-width: 30rem;
 }
+
+.card > a:link, .card > a:visited, .card > a {
+    text-decoration: none;
+}
