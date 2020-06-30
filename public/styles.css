@@ -130,4 +130,5 @@ body .footer {
 
 .card > a:link, .card > a:visited, .card > a {
     text-decoration: none;
+    color: #777;
 }

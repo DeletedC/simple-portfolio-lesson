@@ -43,15 +43,16 @@ const projects = [
 const buildCards = (cards) => cards.map((card)=> {
     return `
         <li class="card">
-            <a href="${card.link}>
+            <a href="${card.link}">
             <div class="img-container">
                 <img src="${card.imgSrc}" alt="">
             </div>
             <h1>${card.title}</h1>
             <p>${card.description}</p>
+            </a>
         </li>
         `
-})
+}).join('');
 
 const buildLinks = (links_) => links_.map((link)=>{
     return `
